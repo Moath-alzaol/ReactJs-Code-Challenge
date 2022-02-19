@@ -21,24 +21,40 @@
     .submit-button {
         width: 320px;
         margin: auto;
+        max-width: 100%;
     }
     .text-input-block {
         margin: auto;
         width: 320px;
+        max-width: 100%;
         input {
             width: 100%;
         }
     }
     @include respond(smallDesktop) {
-        .submit-button,
-        .reusable-label span {
+        .submit-button {
             font-size: 14px;
         }
-        .text-input-block input {
-            font-size: 13px;
-            &::placeholder {
-                font-size: 12px;
-            }
+    }
+
+    @include respond(laptop) {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    @include respond(large-phone) {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    @include respond(phone) {
+        .login__form {
+            padding: 23px;
+        }
+        h2 {
+            font-size: 20px;
         }
     }
 }
