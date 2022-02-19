@@ -1,0 +1,68 @@
+@import "../../abstract/mixins";
+
+.text-input-block {
+    min-width: 199px;
+    .MuiFormControl-root {
+        width: 100%;
+        margin-bottom: 15px;
+        .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root,
+        input {
+            color: $primary-color;
+        }
+    }
+    // input {
+    //     padding: 5px 10px;
+    //     font-size: 15px;
+    //     height: 38px;
+
+    //     border-radius: 5px;
+    //     color: $primary-color !important;
+    // }
+    .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input,
+    .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+        color: silver;
+        font-size: 15px;
+    }
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+        border-color: $primary-color;
+    }
+    .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+        border-color: #fff !important;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-text-fill-color: $primary-color !important;
+}
+.text-input-block .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    background-color: transparent !important;
+    color: $primary-color;
+    -webkit-text-fill-color: $primary-color !important;
+}
+@include respond(laptop) {
+    .text-input-block {
+        .input-group {
+            padding: 8px 15px;
+            .form-control,
+            textarea {
+                font-size: 16px;
+                &::placeholder {
+                    font-size: 16px;
+                }
+            }
+            textarea {
+                min-height: 100px;
+            }
+        }
+    }
+}

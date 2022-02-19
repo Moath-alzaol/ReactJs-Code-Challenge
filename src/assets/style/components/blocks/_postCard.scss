@@ -1,0 +1,28 @@
+.post-card {
+    margin-bottom: 20px;
+    background-color: #fff !important;
+    &.post-card-edit {
+        background-color: #151515 !important;
+        .submit-button {
+            width: 100%;
+        }
+    }
+    .css-46bh2p-MuiCardContent-root,
+    .post-card__comment-body {
+        padding: 0 72px;
+    }
+
+    @include respond(large-phone) {
+        .css-46bh2p-MuiCardContent-root {
+            padding: 0 40px;
+        }
+        .post-card__comment {
+            .css-1qismt5-MuiCardHeader-root {
+                padding: 16px 0;
+            }
+            .post-card__comment-body {
+                padding: 0;
+            }
+        }
+    }
+}
