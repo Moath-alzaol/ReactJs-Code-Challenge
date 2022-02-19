@@ -8,16 +8,15 @@
         .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root,
         input {
             color: $primary-color;
+            &::placeholder {
+                color: $primary-color;
+            }
         }
     }
-    // input {
-    //     padding: 5px 10px;
-    //     font-size: 15px;
-    //     height: 38px;
+    .css-p0rm37 {
+        color: $primary-color;
+    }
 
-    //     border-radius: 5px;
-    //     color: $primary-color !important;
-    // }
     .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input,
     .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
         color: silver;
@@ -48,21 +47,4 @@ textarea:-webkit-autofill:active {
     background-color: transparent !important;
     color: $primary-color;
     -webkit-text-fill-color: $primary-color !important;
-}
-@include respond(laptop) {
-    .text-input-block {
-        .input-group {
-            padding: 8px 15px;
-            .form-control,
-            textarea {
-                font-size: 16px;
-                &::placeholder {
-                    font-size: 16px;
-                }
-            }
-            textarea {
-                min-height: 100px;
-            }
-        }
-    }
 }
